@@ -95,9 +95,11 @@ function checkMine(r, c){
     if (r < 0 || r >= rows || c < 0 || c >= colums) {
         return;
     }
-    if(board[r][c].classList.contains("tile.clicked")){
+    if(board[r][c].classList.contains("title-clicked")){
         return;
     }
+
+    board[r][c].classList.add("title-clicked")
 
     let minesFound = 0;
 
