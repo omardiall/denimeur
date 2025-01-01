@@ -95,6 +95,9 @@ function checkMine(r, c){
     if (r < 0 || r >= rows || c < 0 || c >= colums) {
         return;
     }
+    if(board[r][c].classList.contains("tile.clicked")){
+        return;
+    }
 
     let minesFound = 0;
 
@@ -116,6 +119,19 @@ function checkMine(r, c){
         board[r][c].innerText = minesFound;
         board[r][c].classList.add("x" + minesFound.toString());
     }
+    else{
+        checkMine(r-1,c-1)
+        checkMine(r-1,c)
+        checkMine(r-1,c+1)
+
+        checkMine(r,c-1)
+        checkMine(r,c+1)
+
+        checkMine(r+1,c-1)
+        checkMine(r+1,c)
+        checkMine(r+1,c+1)
+    }
+
     
 }
 
