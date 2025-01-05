@@ -1,71 +1,73 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-align: center;
+    
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
 }
 
-#board{
-    width: 400px;
-    height: 400px;
+
+#board {
+    display: grid;
+    gap: 1px;
+    margin: 20px auto;
     border: 10px solid darkgrey;
     background-color: lightgray;
-
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
 }
 
-#board div {
-    width: 48px;
-    height: 48px;
-    border: 1px solid whitesmoke;
 
-    font-size: 30px;
+#board div {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 20px; 
+
+    border: 1px solid whitesmoke;
+    background-color: lightgray; 
+    width: 40px; 
+    height: 40px; 
 }
 
-.title-clicked{
-    background:darkgray ;
+
+.title-clicked {
+    background: darkgray !important; 
 }
 
-.x1{
-    color: blue;
+
+.x1 { color: blue; }
+
+.x2 { color: green; }
+
+.x3 { color: red; }
+
+.x4 { color: navy; }
+
+.x5 { color: brown; }
+
+.x6 { color: teal; }
+
+.x7 { color: black; }
+
+.x8 { color: gray; }
+
+
+#flag-button, #start-button {
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
 }
 
-.x2{
-    color: green;
-}
-
-.x3{
-    color: red;
-}
-
-.x4{
-    color: navy;
-}
-
-.x5{
-    color: brown;
-}
-
-.x6{
-    color: teal;
-}
-
-.x7{
-    color: black;
-}
-
-.x8{
-    color: gray;
-}
-
-#flag-button{
-    width: 100px;
-    height: 50px;
-    font-size: 30px;
-    background-color: lightgray;
-    border: none;
+#level-select {
+    width: 150px;
+    height: 30px;
+    font-size: 16px;
+    margin: 10px;
 }

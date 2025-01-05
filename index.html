@@ -8,11 +8,21 @@
     <script src="demineur.js"></script>
 </head>
 <body>
-    <h1>Mines: <span id="mines-count">0</span></h1>
-    <div id="board">
-       <!--   <div class="x1 title-clicked"></div>   --> 
+    <h1>Nombre de mines : <span id="mines-count">0</span></h1>
+    <div id="top-elements">
+        <button id="start-button">Start/restart</button>
+        <label for="level-select">Select Level:</label>
+    <select id="level-select">
+        <option value="Débutant">Débutant</option>
+        <option value="Intermédiaire">Intermédiaire</option>
+        <option value="Expert">Expert</option>
+        <option value="Maître">Maître</option>
+    </select>
     </div>
+    
+    <div id="board"></div>
     <br>
     <button id="flag-button">🚩</button>
+
 </body>
 </html>
