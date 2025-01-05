@@ -43,7 +43,9 @@ function startGame(){
         for(let c = 0; c < colums ; c++){
             let tile = document.createElement("div")
             tile.id = r.toString() + "-" + c.toString();
+            
             tile.addEventListener("click", clickTile);
+
             document.getElementById("board").append(tile);
             row.push(tile);
         }
@@ -176,19 +178,23 @@ function checkTile(r,c) {
 function resetGame() {
     
     let level = document.getElementById("level-select").value;
-    if (level === "Débutant") {
+    if (level === "Débutant") 
+        {
         rows = 9;
         colums = 9;
         minescount = 10;
-    } else if (level === "Intermédiaire") {
+    } else if (level === "Intermédiaire")
+         {
         rows = 16;
         colums = 16;
         minescount = 40;
-    } else if (level === "Expert") {
+    } else if (level === "Expert") 
+        {
         rows = 22;
         colums = 22;
         minescount = 100;
-    } else if (level === "Maître") {
+    } else if (level === "Maître")
+         {
         rows = 30;
         colums = 30;
         minescount = 250;
@@ -197,11 +203,13 @@ function resetGame() {
     
     let boardElement = document.getElementById("board");
     boardElement.innerHTML = ""; 
+
     board = [];
     mineslocation = [];
 
-    
+
     tilesClicked = 0;
+
     gameOver = false;
 
     
